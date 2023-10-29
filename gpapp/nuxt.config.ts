@@ -26,4 +26,11 @@ export default defineNuxtConfig({
             },
         },
     },
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
+    css: ["~/assets/style/main.sass"],
 });
