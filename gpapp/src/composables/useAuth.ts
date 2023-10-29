@@ -25,5 +25,10 @@ export default function () {
                 showAlert({ message: "Credenciais inválidas" });
             }
         },
+
+        logout() {
+            localStorage.removeItem("token");
+            router.replace({ name: "login" });
+        },
     };
 }
