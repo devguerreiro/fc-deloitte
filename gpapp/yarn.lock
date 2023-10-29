@@ -278,6 +278,13 @@
     "@babel/helper-plugin-utils" "^7.22.5"
     "@babel/plugin-syntax-typescript" "^7.22.5"
 
+"@babel/runtime@^7.22.5":
+  version "7.23.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.2.tgz#062b0ac103261d68a966c4c7baf2ae3e62ec3885"
+  integrity sha512-mM8eg4yl5D6i3lu2QKPuPH4FArvJ8KhTofbE7jwMUv9KX5mBvwPAqnV3MlyBNqdp9RyRKP6Yck8TrfYrPvX3bg==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/standalone@^7.22.9":
   version "7.23.2"
   resolved "https://registry.npmjs.org/@babel/standalone/-/standalone-7.23.2.tgz"
@@ -1254,6 +1261,15 @@
     "@unhead/shared" "1.7.4"
     hookable "^5.5.3"
     unhead "1.7.4"
+
+"@vee-validate/zod@^4.11.8":
+  version "4.11.8"
+  resolved "https://registry.yarnpkg.com/@vee-validate/zod/-/zod-4.11.8.tgz#6298186145a7a9815e3337df99dc52853e0c60d8"
+  integrity sha512-qAyqDEigklMf669ZqIw9t95g0Ipzu9rMYUqcZpANlCvyaIAeBlJGcsv+2CewlqgwuC6BL9EAURLJ8Ux5WlBgXg==
+  dependencies:
+    type-fest "^4.3.1"
+    vee-validate "4.11.8"
+    zod "^3.22.2"
 
 "@vercel/nft@^0.24.3":
   version "0.24.3"
@@ -2980,6 +2996,13 @@ humanize-ms@^1.2.1:
   integrity sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==
   dependencies:
     ms "^2.0.0"
+
+i18next@^23.6.0:
+  version "23.6.0"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-23.6.0.tgz#c6e996cfd3fef0bf60be3b7c581c35338dba5a71"
+  integrity sha512-z0Cxr0MGkt+kli306WS4nNNM++9cgt2b2VCMprY92j+AIab/oclgPxdwtTZVLP1zn5t5uo8M6uLsZmYrcjr3HA==
+  dependencies:
+    "@babel/runtime" "^7.22.5"
 
 iconv-lite@^0.6.2:
   version "0.6.3"
@@ -4724,6 +4747,11 @@ redis-parser@^3.0.0:
   dependencies:
     redis-errors "^1.0.0"
 
+regenerator-runtime@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
+  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
+
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
@@ -5341,6 +5369,11 @@ type-fest@^3.8.0:
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-3.13.1.tgz"
   integrity sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==
 
+type-fest@^4.3.1:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.6.0.tgz#9c575f7e20530defef4f9cdc5e2c85d6e4ea0fc9"
+  integrity sha512-rLjWJzQFOq4xw7MgJrCZ6T1jIOvvYElXT12r+y0CC6u67hegDHaxcPqb2fZHOGlqxugGQPNB1EnTezjBetkwkw==
+
 ufo@^1.1.2, ufo@^1.2.0, ufo@^1.3.0, ufo@^1.3.1:
   version "1.3.1"
   resolved "https://registry.npmjs.org/ufo/-/ufo-1.3.1.tgz"
@@ -5564,6 +5597,14 @@ validate-npm-package-name@^5.0.0:
   integrity sha512-YuKoXDAhBYxY7SfOKxHBDoSyENFeW5VvIIQp2TGQuit8gpK6MnWaQelBKxso72DoxTZfZdcP3W90LqpSkgPzLQ==
   dependencies:
     builtins "^5.0.0"
+
+vee-validate@4.11.8, vee-validate@^4.11.8:
+  version "4.11.8"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-4.11.8.tgz#396b00c247af65714926a53a2e7e5e76725d1b92"
+  integrity sha512-ZuVpw0axWYBM3aVTD/bm94hcWHumqeUgNjptOqfBT0gyqyHaGYCrm0tSD/0bygEbWUDwEPJOQaEKaUGM82j8TQ==
+  dependencies:
+    "@vue/devtools-api" "^6.5.0"
+    type-fest "^4.3.1"
 
 vite-node@^0.33.0:
   version "0.33.0"
@@ -5865,3 +5906,13 @@ zip-stream@^5.0.1:
     archiver-utils "^4.0.1"
     compress-commons "^5.0.1"
     readable-stream "^3.6.0"
+
+zod-i18n-map@^2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/zod-i18n-map/-/zod-i18n-map-2.21.0.tgz#e0bbfc540a9696d8967263fd4184e41b43518994"
+  integrity sha512-5yyL8m6GDfaNH2u9GC7QE3U8XTPYOGjXMFgxhXzK8N/HCTZHyBQR5X0Y76n4AscbHNmBfxLKXLwkjWXpx6JZaw==
+
+zod@^3.22.2:
+  version "3.22.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
+  integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==

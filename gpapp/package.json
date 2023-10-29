@@ -22,6 +22,10 @@
     },
     "dependencies": {
         "@mdi/font": "^7.3.67",
-        "sass": "^1.69.5"
+        "@vee-validate/zod": "^4.11.8",
+        "i18next": "^23.6.0",
+        "sass": "^1.69.5",
+        "vee-validate": "^4.11.8",
+        "zod-i18n-map": "^2.21.0"
     }
 }
