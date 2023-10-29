@@ -4,7 +4,7 @@
         <AppHeader />
         <AppNavbar />
         <v-main>
-            <v-container>
+            <v-container class="t-mt-8">
                 <slot />
             </v-container>
         </v-main>

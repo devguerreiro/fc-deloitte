@@ -8,10 +8,7 @@ export default defineNuxtConfig({
             BASE_URL: process.env.BASE_URL,
         },
     },
-    routeRules: {
-        "/": { ssr: false },
-        "/login": { ssr: false },
-    },
+    ssr: false,
     srcDir: "src",
     build: {
         transpile: ["vuetify"],

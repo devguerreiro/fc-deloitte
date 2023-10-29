@@ -6,10 +6,13 @@ const { logout } = useAuth();
     <div>
         <v-navigation-drawer expand-on-hover rail>
             <v-list density="comfortable" nav>
-                <v-list-item
-                    prepend-icon="mdi-account-school"
-                    title="Minhas Notas"
-                />
+                <nuxt-link>
+                    <v-list-item
+                        prepend-icon="mdi-account-school"
+                        title="Minhas Notas"
+                        :to="{ name: 'my-grades' }"
+                    />
+                </nuxt-link>
                 <v-list-item
                     prepend-icon="mdi-human-male-board"
                     title="Minhas Disciplinas"

@@ -1,19 +1,19 @@
 <script setup lang="ts">
-const { state: alert, closeAlert } = useAlert();
+const { state: alertState, closeAlert } = useAlert();
 </script>
 
 <template>
-    <Transition :name="alert.type === 'error' ? 'alert-error' : 'alert'">
+    <Transition :name="alertState.type === 'error' ? 'alert-error' : 'alert'">
         <div
-            v-if="alert.open"
+            v-if="alertState.open"
             class="t-w-1/3 t-absolute t-top-4 t-right-4 t-z-10"
         >
             <v-alert
                 class=""
                 closable
-                :text="alert.message"
-                :type="alert.type"
-                :variant="alert.variant"
+                :text="alertState.message"
+                :type="alertState.type"
+                :variant="alertState.variant"
                 @click:close="closeAlert"
             />
         </div>
