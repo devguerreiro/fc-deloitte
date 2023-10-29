@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
     layout: "blank",
-    title: "Login - GPAPP",
+    title: "Login",
 });
 </script>
 

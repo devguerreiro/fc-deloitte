@@ -1,8 +1,6 @@
 <template>
-    <Title>
-        {{ $route.meta.title }}
-    </Title>
     <v-app>
+        <Title> {{ $route.meta.title }} - GPAPP </Title>
         <v-app-bar></v-app-bar>
         <v-navigation-drawer></v-navigation-drawer>
         <v-main>

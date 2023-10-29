@@ -12,11 +12,15 @@ export default function () {
             try {
                 const data = await AuthAPI.login(credentials);
 
-                if (remember) {
-                    localStorage.setItem("token", data.token);
+                localStorage.setItem("token", data.token);
+
+                if (!remember) {
+                    window.addEventListener("beforeunload", () => {
+                        localStorage.removeItem("token");
+                    });
                 }
 
-                router.push("/");
+                router.replace({ name: "index" });
             } catch (e) {
                 showAlert({ message: "Credenciais inválidas" });
             }
