@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { AuthProfile } from "~/services/api/auth";
+
 definePageMeta({
     title: "Minhas Notas",
+    profiles: [AuthProfile.STUDENT],
 });
 
 const { state: studentState, getStudentGrades } = useStudent();

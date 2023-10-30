@@ -4,6 +4,7 @@ export enum AuthProfile {
     STUDENT = 0,
     TEACHER = 1,
     COORDINATOR = 2,
+    ADMIN = 3,
 }
 
 interface ILoginData {

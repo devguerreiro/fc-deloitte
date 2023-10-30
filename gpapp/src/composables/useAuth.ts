@@ -13,8 +13,15 @@ export default function () {
 
     const { showAlert } = useAlert();
 
-    const { clear, setToken, setUserID, getToken, getUserID, getProfile } =
-        useLocalStorage();
+    const {
+        clear,
+        setToken,
+        setUserID,
+        setProfile,
+        getToken,
+        getUserID,
+        getProfile,
+    } = useLocalStorage();
 
     const state = useState<IAuthState>("auth", () => {
         if (process.client) {
@@ -44,6 +51,7 @@ export default function () {
 
                 setToken(data.token);
                 setUserID(data.user_id);
+                setProfile(data.profile);
 
                 setState({
                     token: data.token,
@@ -62,6 +70,11 @@ export default function () {
         },
 
         logout() {
+            setState({
+                token: null,
+                userID: null,
+                profile: null,
+            });
             clear();
             router.replace({ name: "login" });
         },
