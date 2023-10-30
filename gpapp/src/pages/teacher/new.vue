@@ -34,7 +34,10 @@ const onSubmit = handleSubmit(async (data: TTeacherSchema) => {
 
 <template>
     <v-sheet elevation="2" class="t-p-12">
-        <h1 class="t-text-2xl t-font-bold">Novo Professor</h1>
+        <div class="t-flex t-justify-between">
+            <h1 class="t-text-2xl t-font-bold">Novo Professor</h1>
+            <v-btn color="red" @click="router.back()">Voltar</v-btn>
+        </div>
         <v-form class="t-mt-6" @submit="onSubmit">
             <v-text-field
                 label="Nome do Professor"
