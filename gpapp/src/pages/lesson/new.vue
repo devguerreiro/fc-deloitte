@@ -28,13 +28,16 @@ const students = defineComponentBinds("students");
 
 const onSubmit = handleSubmit(async (data: TLessonSchema) => {
     await createLesson(data);
-    router.push({ name: "index" });
+    router.push({ name: "lesson" });
 });
 </script>
 
 <template>
     <v-sheet elevation="2" class="t-p-12">
-        <h1 class="t-text-2xl t-font-bold">Nova Disciplina</h1>
+        <div class="t-flex t-justify-between">
+            <h1 class="t-text-2xl t-font-bold">Nova Disciplina</h1>
+            <v-btn color="red" @click="router.back()">Voltar</v-btn>
+        </div>
         <v-form class="t-mt-6" @submit="onSubmit">
             <v-text-field
                 label="Nome da Disciplina"

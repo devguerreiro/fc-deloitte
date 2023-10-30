@@ -25,7 +25,7 @@ const { isStudent, isTeacher, isCoordinator, isAdmin, logout } = useAuth();
                     />
                 </nuxt-link>
                 <template v-if="isCoordinator || isAdmin">
-                    <nuxt-link :to="{ name: 'lesson-new' }">
+                    <nuxt-link :to="{ name: 'lesson' }">
                         <v-list-item
                             prepend-icon="mdi-school"
                             title="Disciplinas"

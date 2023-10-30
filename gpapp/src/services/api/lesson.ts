@@ -40,6 +40,10 @@ export default class LessonAPI {
         return await useAPI<ILessonData>(`${LessonAPI.BASE_URL}/${lessonID}/`);
     }
 
+    static async fetchLessons() {
+        return await useAPI<Array<ILessonData>>(`${LessonAPI.BASE_URL}/`);
+    }
+
     static async updateStudentGrades(
         lessonID: number,
         data: IStudentGradesBody
