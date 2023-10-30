@@ -6,24 +6,24 @@ interface IStudent {
     profile: number;
 }
 
-interface ILessonStudent {
+export interface ILessonGrade {
     id: number;
     student: IStudent;
     grades: Array<number>;
 }
 
-export interface ITeacherLessonsData {
-    id: number;
+export interface ILessonData {
+    id: string;
     name: string;
     load: number;
-    students: Array<ILessonStudent>;
+    students: Array<ILessonGrade>;
 }
 
 export default class TeacherAPI {
     static readonly BASE_URL = "api/v1/teacher";
 
     static async fetchTeacherLessons(teacherID: number) {
-        return await useAPI<Array<ITeacherLessonsData>>(
+        return await useAPI<Array<ILessonData>>(
             `${TeacherAPI.BASE_URL}/${teacherID}/lessons/`
         );
     }

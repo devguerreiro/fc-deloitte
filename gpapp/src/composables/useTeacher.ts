@@ -1,8 +1,8 @@
 import TeacherAPI from "~/services/api/teacher";
-import type { ITeacherLessonsData } from "~/services/api/teacher";
+import type { ILessonData } from "~/services/api/teacher";
 
 interface ITeacherState {
-    lessons: Array<ITeacherLessonsData>;
+    lessons: Array<ILessonData>;
 }
 
 export default function () {

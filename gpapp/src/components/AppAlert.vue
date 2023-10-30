@@ -4,12 +4,8 @@ const { state: alertState, closeAlert } = useAlert();
 
 <template>
     <Transition :name="alertState.type === 'error' ? 'alert-error' : 'alert'">
-        <div
-            v-if="alertState.open"
-            class="t-w-1/3 t-absolute t-top-4 t-right-4 t-z-10"
-        >
+        <div v-if="alertState.open">
             <v-alert
-                class=""
                 closable
                 :text="alertState.message"
                 :type="alertState.type"
@@ -20,7 +16,7 @@ const { state: alertState, closeAlert } = useAlert();
     </Transition>
 </template>
 
-<style>
+<style scoped>
 .alert-enter-active {
     animation: alert 0.2s ease-out;
 }

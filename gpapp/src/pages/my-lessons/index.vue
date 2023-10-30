@@ -25,13 +25,17 @@ await useAsyncData(
                             class="t-w-full t-flex t-justify-between t-items-center"
                         >
                             <h2>{{ lesson.name.toUpperCase() }}</h2>
-                            <v-chip class="t-mr-8" color="secondary">
+                            <v-chip
+                                class="t-mr-8"
+                                color="success"
+                                variant="elevated"
+                            >
                                 {{ lesson.load }}
                             </v-chip>
                         </div>
                     </template>
                     <template #text>
-                        <div>
+                        <div class="t-mt-4">
                             <v-card>
                                 <v-card-title>
                                     <h3>Informações da Disciplina</h3>
@@ -51,9 +55,18 @@ await useAsyncData(
                             </v-card>
                         </div>
                         <div class="t-flex t-justify-center t-py-6">
-                            <v-btn color="black" variant="elevated"
-                                >Ver turma</v-btn
+                            <nuxt-link
+                                :to="{
+                                    name: 'my-lessons-id',
+                                    params: {
+                                        id: lesson.id,
+                                    },
+                                }"
                             >
+                                <v-btn color="black" variant="elevated">
+                                    Ver turma
+                                </v-btn>
+                            </nuxt-link>
                         </div>
                     </template>
                 </v-expansion-panel>
