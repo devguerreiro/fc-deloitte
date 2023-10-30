@@ -10,7 +10,7 @@ await useAsyncData(async () => await getLessons());
 
 <template>
     <div>
-        <div class="t-flex t-justify-between">
+        <div class="t-flex t-justify-between t-items-center">
             <h1 class="t-text-2xl t-font-bold">Disciplinas</h1>
             <nuxt-link :to="{ name: 'lesson-new' }">
                 <v-btn color="black">Nova Disciplina</v-btn>

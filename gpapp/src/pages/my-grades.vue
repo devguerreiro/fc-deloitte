@@ -36,7 +36,7 @@ const getGradeAverage = (grades: Array<number>) => {
 <template>
     <div>
         <h1 class="t-text-2xl t-font-bold">Minhas Notas</h1>
-        <v-sheet elevation="4" class="t-mt-8">
+        <v-sheet elevation="2" class="t-mt-8">
             <v-table fixed-header hover style="max-height: 475px">
                 <thead>
                     <tr>

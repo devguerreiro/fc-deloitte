@@ -31,7 +31,7 @@ const { isStudent, isTeacher, isCoordinator, isAdmin, logout } = useAuth();
                             title="Disciplinas"
                         />
                     </nuxt-link>
-                    <nuxt-link :to="{ name: 'student-new' }">
+                    <nuxt-link :to="{ name: 'student' }">
                         <v-list-item
                             prepend-icon="mdi-account-school"
                             title="Alunos"
