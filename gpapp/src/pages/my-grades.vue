@@ -37,7 +37,7 @@ const getGradeAverage = (grades: Array<number>) => {
     <div>
         <h1 class="t-text-2xl t-font-bold">Minhas Notas</h1>
         <v-sheet elevation="4" class="t-mt-8">
-            <v-table theme="dark" fixed-header hover style="max-height: 475px">
+            <v-table fixed-header hover style="max-height: 475px">
                 <thead>
                     <tr>
                         <th
@@ -51,7 +51,7 @@ const getGradeAverage = (grades: Array<number>) => {
                 </thead>
                 <tbody>
                     <tr v-for="item in studentState.grades" :key="item.id">
-                        <td>{{ item.lesson.name }}</td>
+                        <td>{{ item.lesson.name.toUpperCase() }}</td>
                         <td v-for="grade in item.grades" :key="grade">
                             {{ grade }}
                         </td>

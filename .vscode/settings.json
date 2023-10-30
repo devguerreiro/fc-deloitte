@@ -1,3 +1,9 @@
 {
-  "conventionalCommits.scopes": ["login", "navbar", "grades", "teacher"]
+  "conventionalCommits.scopes": [
+    "login",
+    "navbar",
+    "grades",
+    "teacher",
+    "student"
+  ]
 }
