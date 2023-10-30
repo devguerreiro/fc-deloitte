@@ -17,6 +17,7 @@ const { errors, handleSubmit, defineComponentBinds } = useForm({
 const name = defineComponentBinds("name");
 const email = defineComponentBinds("email");
 const password = defineComponentBinds("password");
+const confirm = defineComponentBinds("confirm");
 const dob = defineComponentBinds("dob");
 
 const dobBR = computed(() => dob.value.modelValue?.toLocaleDateString("pt-br"));
@@ -57,6 +58,14 @@ const onSubmit = handleSubmit(async (data: TStudentSchema) => {
                 prepend-inner-icon="mdi-lock"
                 v-bind="password"
                 :error-messages="errors.password"
+            />
+            <v-text-field
+                label="Confirmação Senha"
+                type="password"
+                variant="solo-filled"
+                prepend-inner-icon="mdi-lock"
+                v-bind="confirm"
+                :error-messages="errors.confirm"
             />
             <v-text-field
                 label="Data de Nascimento"
