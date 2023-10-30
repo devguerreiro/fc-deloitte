@@ -45,6 +45,11 @@ export default function () {
     return {
         state,
 
+        isStudent: state.value.profile === AuthProfile.STUDENT,
+        isTeacher: state.value.profile === AuthProfile.TEACHER,
+        isCoordinator: state.value.profile === AuthProfile.COORDINATOR,
+        isAdmin: state.value.profile === AuthProfile.ADMIN,
+
         async login(credentials: TLoginSchema, remember: boolean = false) {
             try {
                 const data = await AuthAPI.login(credentials);
