@@ -9,6 +9,14 @@ export interface IStudentGradesData {
     grades: Array<number>;
 }
 
+export interface IStudent {
+    id: number;
+    name: string;
+    email: string;
+    dob: string;
+    profile: number;
+}
+
 export default class StudentAPI {
     static readonly BASE_URL = "api/v1/student";
 
@@ -16,5 +24,9 @@ export default class StudentAPI {
         return await useAPI<Array<IStudentGradesData>>(
             `${StudentAPI.BASE_URL}/${studentID}/grades/`
         );
+    }
+
+    static async fetchStudents() {
+        return await useAPI<Array<IStudent>>(`${StudentAPI.BASE_URL}/`);
     }
 }

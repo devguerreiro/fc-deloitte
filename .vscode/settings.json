@@ -4,6 +4,7 @@
     "navbar",
     "grades",
     "teacher",
-    "student"
+    "student",
+    "lesson"
   ]
 }

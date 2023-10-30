@@ -1,3 +1,5 @@
+import type { TLessonSchema } from "~/schemas/lesson";
+
 interface IStudent {
     id: number;
     name: string;
@@ -49,5 +51,12 @@ export default class LessonAPI {
                 body: data,
             }
         );
+    }
+
+    static async createLesson(data: TLessonSchema) {
+        return await useAPI<TLessonSchema>(`${LessonAPI.BASE_URL}/`, {
+            method: "POST",
+            body: data,
+        });
     }
 }

@@ -24,11 +24,13 @@ const { isStudent, isTeacher, isCoordinator, isAdmin, logout } = useAuth();
                         title="Minhas Disciplinas"
                     />
                 </nuxt-link>
-                <nuxt-link v-if="isCoordinator || isAdmin">
-                    <v-list-item
-                        prepend-icon="mdi-school"
-                        title="Disciplinas"
-                    />
+                <template v-if="isCoordinator || isAdmin">
+                    <nuxt-link :to="{ name: 'lesson-new' }">
+                        <v-list-item
+                            prepend-icon="mdi-school"
+                            title="Disciplinas"
+                        />
+                    </nuxt-link>
                     <v-list-item
                         prepend-icon="mdi-account-school"
                         title="Alunos"
@@ -37,7 +39,7 @@ const { isStudent, isTeacher, isCoordinator, isAdmin, logout } = useAuth();
                         prepend-icon="mdi-human-male-board"
                         title="Professores"
                     />
-                </nuxt-link>
+                </template>
             </v-list>
             <template #append>
                 <v-list-item class="t-mb-4" prepend-icon="mdi-logout">

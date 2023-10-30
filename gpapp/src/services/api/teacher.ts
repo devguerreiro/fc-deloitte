@@ -19,6 +19,14 @@ export interface ILessonData {
     students: Array<ILessonGrade>;
 }
 
+export interface ITeacher {
+    id: number;
+    name: string;
+    email: string;
+    dob: string;
+    profile: number;
+}
+
 export default class TeacherAPI {
     static readonly BASE_URL = "api/v1/teacher";
 
@@ -26,5 +34,9 @@ export default class TeacherAPI {
         return await useAPI<Array<ILessonData>>(
             `${TeacherAPI.BASE_URL}/${teacherID}/lessons/`
         );
+    }
+
+    static async fetchTeachers() {
+        return await useAPI<Array<ITeacher>>(`${TeacherAPI.BASE_URL}/`);
     }
 }

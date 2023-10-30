@@ -1,3 +1,4 @@
+import { type TLessonSchema } from "./../schemas/lesson";
 import LessonAPI from "~/services/api/lesson";
 import type { ILessonData, IStudentGradesBody } from "~/services/api/lesson";
 
@@ -31,6 +32,21 @@ export default function () {
                 await LessonAPI.updateStudentGrades(lessonID, data);
                 showAlert({
                     message: "Atualizado com sucesso!",
+                    type: "success",
+                });
+            } catch (e: unknown) {
+                const error = e as Error;
+                showAlert({
+                    message: error.message,
+                });
+            }
+        },
+
+        async createLesson(data: TLessonSchema) {
+            try {
+                await LessonAPI.createLesson(data);
+                showAlert({
+                    message: "Disciplina cadastrada com sucesso!",
                     type: "success",
                 });
             } catch (e: unknown) {
