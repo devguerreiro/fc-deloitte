@@ -1,3 +1,5 @@
+import type { TTeacherSchema } from "~/schemas/teacher";
+
 interface IStudent {
     id: number;
     name: string;
@@ -38,5 +40,12 @@ export default class TeacherAPI {
 
     static async fetchTeachers() {
         return await useAPI<Array<ITeacher>>(`${TeacherAPI.BASE_URL}/`);
+    }
+
+    static async createTeacher(data: TTeacherSchema) {
+        return await useAPI<ITeacher>(`${TeacherAPI.BASE_URL}/`, {
+            method: "POST",
+            body: { ...data, dob: data.dob.toLocaleDateString("pt-br") },
+        });
     }
 }

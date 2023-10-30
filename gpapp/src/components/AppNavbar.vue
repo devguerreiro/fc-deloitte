@@ -37,10 +37,12 @@ const { isStudent, isTeacher, isCoordinator, isAdmin, logout } = useAuth();
                             title="Alunos"
                         />
                     </nuxt-link>
-                    <v-list-item
-                        prepend-icon="mdi-human-male-board"
-                        title="Professores"
-                    />
+                    <nuxt-link :to="{ name: 'teacher-new' }">
+                        <v-list-item
+                            prepend-icon="mdi-human-male-board"
+                            title="Professores"
+                        />
+                    </nuxt-link>
                 </template>
             </v-list>
             <template #append>

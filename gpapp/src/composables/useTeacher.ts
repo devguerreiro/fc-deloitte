@@ -1,3 +1,4 @@
+import type { TTeacherSchema } from "~/schemas/teacher";
 import TeacherAPI from "~/services/api/teacher";
 import type { ILessonData, ITeacher } from "~/services/api/teacher";
 
@@ -12,6 +13,8 @@ export default function () {
         teachers: [],
     }));
 
+    const { showAlert } = useAlert();
+
     return {
         state,
 
@@ -23,6 +26,22 @@ export default function () {
 
         async getTeachers() {
             state.value.teachers = await TeacherAPI.fetchTeachers();
+        },
+
+        async createTeacher(data: TTeacherSchema) {
+            try {
+                const response = await TeacherAPI.createTeacher(data);
+                showAlert({
+                    message: "Professor cadastrado com sucesso!",
+                    type: "success",
+                });
+                return response;
+            } catch (e: unknown) {
+                const error = e as Error;
+                showAlert({
+                    message: error.message,
+                });
+            }
         },
     };
 }
