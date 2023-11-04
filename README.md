@@ -23,4 +23,4 @@ Para executacao da aplicacao:
 
 A aplicacao estara rodando no endereco **localhost:3000**
 
-![image](https://github.com/devguerreiro/fc-deloitte/assets/50927696/d42b6efd-c384-4a24-8c9d-82894524a786)
+![image](https://github.com/devguerreiro/fc-deloitte/assets/50927696/c22eac4e-c12d-4c75-b3ee-d14435dfe705)
