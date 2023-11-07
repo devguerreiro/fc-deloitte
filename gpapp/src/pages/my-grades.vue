@@ -27,7 +27,7 @@ const headers = computed(() => {
 });
 
 const getGradeAverage = (grades: Array<number>) => {
-    return (grades.reduce((acc, v) => acc + v, 0) / grades.length || 0).toFixed(
+    return (grades.reduce((acc, v) => acc + Number(v), 0) / grades.length || 0).toFixed(
         2
     );
 };
