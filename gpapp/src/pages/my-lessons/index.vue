@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { AuthProfile } from '~/services/api/auth';
+
 definePageMeta({
     title: "Minhas Disciplinas",
+    profiles: [AuthProfile.TEACHER],
 });
 
 const { state: authState } = useAuth();

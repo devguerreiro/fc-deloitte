@@ -7,7 +7,7 @@ const { isStudent, isTeacher, isCoordinator, isAdmin, logout } = useAuth();
         <v-navigation-drawer expand-on-hover rail>
             <v-list density="comfortable" nav>
                 <nuxt-link
-                    v-if="isStudent || isAdmin"
+                    v-if="isStudent"
                     :to="{ name: 'my-grades' }"
                 >
                     <v-list-item
@@ -16,7 +16,7 @@ const { isStudent, isTeacher, isCoordinator, isAdmin, logout } = useAuth();
                     />
                 </nuxt-link>
                 <nuxt-link
-                    v-if="isTeacher || isAdmin"
+                    v-if="isTeacher"
                     :to="{ name: 'my-lessons' }"
                 >
                     <v-list-item
